@@ -1,0 +1,84 @@
+---
+# Install selected packages
+
+- name: Install os packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ os_packages }}"
+
+- name: Snapd service
+  service:
+    name: snapd
+    state: started
+    enabled: yes
+
+- name: Install text editor Atom
+  import_tasks: setup-atom.yml
+  when: atom_install == true
+  tags: atom
+
+- name: Install awscli
+  import_tasks: setup-aws-cli.yml
+  when: awscli_install == true
+  tags: awscli
+
+- name: Install voice and text chat Discord
+  import_tasks: setup-discord.yml
+  when: discord_install == true
+  tags: discord
+
+- name: Install Docker
+  import_tasks: setup-docker.yml
+  when: docker_install == true
+  tags: docker
+
+- name: Install google cloud sdk
+  import_tasks: setup-gcloud-sdk.yml
+  when: gcloud_install == true
+  tags: gcloud
+
+- name: Install Kubernetes Minikube
+  import_tasks: setup-minikube.yml
+  when: minikube_install == true
+  tags: minikube
+
+- name: Install Hashicorp Packer
+  import_tasks: setup-packer.yml
+  when: packer_install == true
+  tags: packer
+
+- name: Install Slack
+  import_tasks: setup-slack.yml
+  when: slack_install == true
+  tags: slack
+
+- name: Install Spotify
+  import_tasks: setup-spotify.yml
+  when: spotify_install == true
+  tags: spotify
+
+- name: Install Tusk
+  import_tasks: setup-tusk.yml
+  when: tusk_install == true
+  tags: tusk
+
+- name: Install Vagrant
+  import_tasks: setup-vagrant.yml
+  when: vagrant_install == true
+  tags: vagrant
+
+- name: Install IntellIJ
+  import_tasks: setup-intellij.yml
+  when: intellij_install == true
+  tags: intellij
+
+- name: Install Gimp
+  import_tasks: setup-gimp.yml
+  when: gimp_install == true
+  tags: gimp
+
+- name: Install uTorrent
+  import_tasks: setup-utorrent.yml
+  when: utorrent_install == true
+  tags: utorrent

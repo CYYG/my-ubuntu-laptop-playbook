@@ -1,0 +1,34 @@
+os_packages:
+  - cryptsetup
+  - ecryptfs-utils
+  - filezilla
+  - git
+  - golang
+  - keepassx
+  - libssl-dev
+  - nmap
+  - openssh-server
+  - openvpn
+  - python
+  - python-dev
+  - python-pip
+  - snapd
+  - terminator
+  - vim
+  - virtualbox
+  - vlc
+  - wget
+  - wireshark
+  - zsh
+
+docker_packages_requirement:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - software-properties-common
+
+atom_os_packages:
+  - ansible-lint
+  - puppet-lint
+  - pylint
+  - shellcheck

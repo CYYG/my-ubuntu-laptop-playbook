@@ -1,0 +1,7 @@
+---
+# Install Gimp.
+
+- name: Install Gimp with package manager snap
+  shell: snap install gimp
+  args:
+    creates: /snap/bin/gimp

@@ -1,0 +1,7 @@
+---
+# Install uTorrent.
+
+- name: Install uTorrent with package manager snap
+  shell: snap install utorrent
+  args:
+    creates: /snap/bin/utorrent

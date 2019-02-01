@@ -1,0 +1,13 @@
+---
+# Install IntellIJ
+
+- name: Download and extract IntellIJ
+  unarchive:
+    src: https://download.jetbrains.com/idea/ideaIC-2018.3.3.tar.gz
+    dest: /opt
+    remote_src: yes
+    extra_opts:
+    -
+
+- name: Run installer
+  shell: /opt/idea-IC-183.5153.38/bin/idea.sh

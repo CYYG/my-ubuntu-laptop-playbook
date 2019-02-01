@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  remote_user: root
+  vars_files:
+    - defaults/main.yml
+
+  roles:
+      - diodonfrost.java
+      - diodonfrost.puppet_agent
+  tasks:
+    - include_tasks: tasks/main.yml
+      tags: always

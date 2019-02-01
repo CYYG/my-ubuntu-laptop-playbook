@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  remote_user: root
+
+  roles:
+    - diodonfrost.puppet_agent
+    - ubuntu-laptop-playbook
+    - diodonfrost.java

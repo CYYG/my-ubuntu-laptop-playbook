@@ -1,0 +1,3 @@
+---
+- name: diodonfrost.puppet_agent
+- name: diodonfrost.java
