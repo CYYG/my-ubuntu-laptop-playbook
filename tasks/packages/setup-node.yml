@@ -1,0 +1,7 @@
+---
+# Install Spotify.
+
+- name: Install NodeJS
+  shell: apt install nodejs npm
+  args:
+    creates: /usr/local/node

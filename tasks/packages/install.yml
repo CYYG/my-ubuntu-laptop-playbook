@@ -82,3 +82,13 @@
   import_tasks: setup-utorrent.yml
   when: utorrent_install == true
   tags: utorrent
+
+- name: Install Rambox
+  import_tasks: setup-rambox.yml
+  when: rambox_install == true
+  tags: rambox
+
+- name: Install NodeJS
+  import_tasks: setup-node.yml
+  when: node_install == true
+  tags: node
